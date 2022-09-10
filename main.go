@@ -20,4 +20,11 @@ func main() {
 		children.Filho()
 		testeEmail := checkmail.ValidateFormat("gui@gmail.com")
 		fmt.Println(testeEmail)
+
+		var (
+			stringona string = "Criando diversas variaveis simultaneamente"
+			idadeGuiDev int = 3
+		)
+
+		fmt.Println(stringona, idadeGuiDev)
 	}
