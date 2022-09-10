@@ -2,14 +2,19 @@ package main
 
 import "fmt"
 
-var name string
+var x int
+var y string
+var z bool
 
 func main() {
-		name = "Guilherme"
-		x := showMyName()
-    fmt.Println(x)
-}
+    x := 42
+		y := "James Bond"
+		z := true
+		
+		s := fmt.Sprintf("%v\n%v\n%v", x, y, z)
+		fmt.Println(s)
+	}
 
-func showMyName() string {
-	 return name
-}
+// func showMyName() string {
+// 	 return name
+// }
