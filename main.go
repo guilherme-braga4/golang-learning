@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"modulo/children"
+	"fmt"
+
+)
 
 type Teste int 
 
@@ -13,4 +17,5 @@ func main() {
 		fmt.Println("%T\n", x)
 		x = 42
 		fmt.Println(x)
+		children.Filho()
 	}

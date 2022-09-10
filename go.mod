@@ -1,3 +1,3 @@
-module hello
+module modulo
 
 go 1.19
