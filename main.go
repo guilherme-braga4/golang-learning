@@ -3,7 +3,7 @@ package main
 import (
 	"modulo/children"
 	"fmt"
-
+  "github.com/badoux/checkmail"
 )
 
 type Teste int 
@@ -18,4 +18,6 @@ func main() {
 		x = 42
 		fmt.Println(x)
 		children.Filho()
+		testeEmail := checkmail.ValidateFormat("gui@gmail.com")
+		fmt.Println(testeEmail)
 	}
