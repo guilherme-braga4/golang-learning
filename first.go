@@ -2,19 +2,15 @@ package main
 
 import "fmt"
 
-var x int
-var y string
-var z bool
+type Teste int 
+
+var x Teste
 
 func main() {
-    x := 42
-		y := "James Bond"
-		z := true
-		
-		s := fmt.Sprintf("%v\n%v\n%v", x, y, z)
-		fmt.Println(s)
-	}
+		x := 1
 
-// func showMyName() string {
-// 	 return name
-// }
+		fmt.Println(x)
+		fmt.Println("%T\n", x)
+		x = 42
+		fmt.Println(x)
+	}
