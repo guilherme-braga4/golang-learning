@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"net/http"
 
 	"github.com/gorilla/mux"
@@ -14,16 +13,14 @@ func main() {
 	// Setting Routes
 	routes(r)
 
+	// Connect the server to the TCP connection
 	http.ListenAndServe(":3000", r)
 }
 
 func routes(r *mux.Router) {
-	r.HandleFunc("/hello", func(w http.ResponseWriter, r *http.Request) {
-		w.Write([]byte("Its seems to be ok!"))
-	})
-	http.Handle("/", r)
+	r.HandleFunc("/hello", sendHello)
 }
 
-func sendHello() {
-	fmt.Println("Hello my friend")
+func sendHello(w http.ResponseWriter, r *http.Request) {
+	w.Write([]byte("Its seems to be ok!"))
 }
