@@ -1,14 +1,11 @@
 package main
 
 import (
-	"fmt"
-	// "github.com/badoux/checkmail"
-	// "modulo/children"
-	"modulo/math"
+	"net/http"
 )
 
 func main() {
-
-	resultadoFinal, resultadoFinal2 := math.Results(1, 2)
-  fmt.Println("resultadoFinal e resultadoFinal2", resultadoFinal, resultadoFinal2)
+	// Instance of http server
+	mux := http.NewServeMux()
+	http.ListenAndServe(":3000", mux)
 }
